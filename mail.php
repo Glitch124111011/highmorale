@@ -5,10 +5,12 @@ session_start();
 //These must be at the top of your script, not inside a function
 $email = $_POST["email"];
 $name = $_POST["name"];
+$subject = $_POST["subject"];
 $message = $_POST["message"];
  
 $_SESSION['email'] = $email;
 $_SESSION['name'] = $name;
+$_SESSION['subject'] = $subject;
 $_SESSION['message'] = $message;
 
 
@@ -36,10 +38,10 @@ try {
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('1510cyan@gmail.com', 'Bryan Mallare');
+    $mail->setFrom('1510cyan@gmail.com', $name);
     $mail->addAddress('fuerteramonchristopher@gmail.com');     //Add a recipient
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Customer';
+    $mail->Subject = $subject;
     $mail->Body    = $message;
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 

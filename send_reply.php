@@ -10,10 +10,12 @@
 <?php
 session_start();
 $name = $_SESSION['name'];
+$subject = $_SESSION['subject'];
 $message = $_SESSION['message'];
 ?>
 <center>
 <h1>Users Name: <?php echo $name ?></h1>
+<h1>Subject: <?php echo $subject ?></h1>
 <h1>Message: <?php echo $message ?></h1>
 
 <h1>THANK YOU WE HAVE RECIEVED YOUR FEEDBACK</h1>

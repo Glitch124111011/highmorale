@@ -40,7 +40,7 @@ body {
 /*header section*/
 .hero_area {
   position: relative;
-  background-color: #000000;
+  background-color: #181818;
   height: 85vh;
 }
 
@@ -246,7 +246,62 @@ a:focus {
   border: 3px solid #fefdfc;
 }
 
+.offer_section .content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 45px 0;
+}
 
+.offer_section .content-box .img-box {
+  min-width: 125px;
+  min-height: 115px;
+  background-color: #eeeded;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 25px;
+}
+
+.offer_section .content-box .img-box svg {
+  width: 55px;
+  height: auto;
+}
+
+.offer_section .content-box:hover .img-box {
+  background-color: #000000;
+}
+
+.offer_section .content-box:hover .img-box svg {
+  fill: #fefdfc !important;
+}
+
+.offer_section .content-box:hover .img-box svg g {
+  fill: #fefdfc !important;
+}
+
+.offer_section .content-box:hover .img-box svg path {
+  fill: #fefdfc !important;
+}
+
+.offer_section .content-box .detail-box h6 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.offer_section .content-box .detail-box p {
+  margin: 0;
+}
 
 .about_section {
   background-color: #f7f7f7;
@@ -288,10 +343,90 @@ a:focus {
   background-color: #000000;
 }
 
+.client_section {
+  font-family: "Lato", sans-serif;
+}
+
+.client_section h2 {
+  text-align: center;
+}
+
+.client_section .client_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.client_section .client_container .img-box {
+  width: 250px;
+  border: 5px solid #000000;
+  border-radius: 100%;
+}
+
+.client_section .client_container .img-box img {
+  width: 100%;
+}
+
+.client_section .client_container .detail-box {
+  margin-top: 25px;
+}
+
+.client_section .client_container .detail-box h4 {
+  text-transform: uppercase;
+  color: #1d1b28;
+  font-weight: normal;
+}
+
+.client_section .client_container .detail-box h6 {
+  text-transform: uppercase;
+  color: #7f7f31;
+}
+
+.client_section .client_container .detail-box p {
+  color: #1d1b28;
+  margin: 20px;
+}
+
+.client_section .client_container .detail-box img {
+  width: 60px;
+}
+
+.client_section .carousel-control-prev,
+.client_section .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background-color: #7f7f31;
+  opacity: 1;
+  top: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+}
+
+.client_section .carousel-control-prev:hover,
+.client_section .carousel-control-next:hover {
+  background-color: #050505;
+}
+
+.client_section .carousel-control-prev {
+  background-image: url(../images/prev.png);
+}
+
+.client_section .carousel-control-next {
+  background-image: url(../images/next.png);
+}
 
 .contact_section {
   position: relative;
-  background-color: #90973b;
+  background-color: #000000;
   font-family: "Poppins", sans-serif;
 }
 
@@ -425,7 +560,7 @@ a:focus {
 .footer_section {
   background-color: #252525;
   padding: 20px;
-  background-color: #000000;
+  background-color: #7a772d;
 }
 
 .footer_section p {
