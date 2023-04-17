@@ -403,7 +403,7 @@ a:focus {
 .client_section .carousel-control-next {
   width: 50px;
   height: 50px;
-  background-color: #7f7f31;
+  background-color: #000000;
   opacity: 1;
   top: 40%;
   background-repeat: no-repeat;
@@ -560,7 +560,7 @@ a:focus {
 .footer_section {
   background-color: #252525;
   padding: 20px;
-  background-color: #7a772d;
+  background-color: #000000;
 }
 
 .footer_section p {
