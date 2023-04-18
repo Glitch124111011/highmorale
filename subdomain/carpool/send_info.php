@@ -36,7 +36,7 @@ try {
     $mail->addAddress($email);     //Add a recipient
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Verify your Email Address';
-    $mail->Body    = 'Hi, <b>'.$fn.' '.$ln.'</b><br><br> You are Applying as '. '<b> '.$user_type.'</b><br><br>Thank you for signing up for our service. To complete the registration process, please click the following link to verify your email address:,<br><br><b><a href="https://carpool.highmorale.tech/table_registered.php?email='.$email.'">Click Me</a></b><br><br>If you did not sign up for our service, please ignore this email.<br><br>
+    $mail->Body    = 'Hi, <b>'.$fn.' '.$ln.'</b><br><br> You are Applying as '. '<b> '.$user_type.'</b><br><br>Thank you for signing up for our service. To complete the registration process, please click the following link to verify your email address:,<br><br><b><a href="https://carpool.highmorale.tech/update.php?email='.$email.'">Click Me</a></b><br><br>If you did not sign up for our service, please ignore this email.<br><br>
     Best regards,<br>
     <b>Car Pooling Company<b>';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
