@@ -22,7 +22,7 @@
   <tbody>
     <?php
     include 'db_connect.php';
-            $sql="SELECT * FROM tbend_users WHERE verified = 'Y'";
+            $sql="SELECT * FROM tbend_users";
             $result = mysqli_query($db_connection, $sql);
             $row = mysqli_fetch_assoc($result);
             while($row = $result->fetch_assoc()) {
