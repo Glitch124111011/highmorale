@@ -52,12 +52,21 @@
                 <li class="nav-item">
                   <a class="nav-link" href=""> About </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href=""> Products </a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Products
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">T-Shirt</a>
+                    <a class="dropdown-item" href="#">Hats</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Others</a>
+                  </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="feedback.php"> Contact</a>
+                  <a class="nav-link" href="#message-section"> Contact</a>
                 </li>
+                
               </ul>
             </div>
           </div>
@@ -81,7 +90,7 @@
                      
                       <br />
                       <span style="border: 1px;border-color: black;">
-                        POGI NI<br>JHON
+                        SPEAD<br>POSITIVITY
                       </span>
                     </h1>
                     <p>
@@ -180,7 +189,7 @@
       </h2>
     </div>
   </div>
-  <div class="container">
+  <div class="container" id="message-section">
     <div class="row">
       <div class="col-md-6 ">
         <form method="post" action="mail.php">
