@@ -21,13 +21,13 @@
             background-color: black; 
         }
         .one{
-            width: 35.43%;
+            width: 100%;
             height: 600px;
             
             display:block;
         }
         .two{
-            width: 80%;
+            width: 100%;
             height: 635px;
           
             display:none;
@@ -209,9 +209,6 @@
           echo "<tr><td>" . $row["user_id"]. "</td><td>" . $row["user_type"]. "</td><td>" . $row["firstname"] . "</td><td>"
           . $row["lastname"]. "</td><td>".$row["user_email"]."</td><td>".$row["gender"]."</td><td>".$row2["car_type"]."</td><td>".$row2["model"]."</td><td>".$row2["color"]."</td><td>".$row2["plate_num"]."</td><td>".$row2["VIN"]."</td><td>".$row2["status"]."</td><td><a href='driver_approve.php?id=$id'><input type='button' value='Approve'></a><a href='driver_reject.php?id=$id'><input type='button' value='Reject'></a> <a href='location.php?id=$id'><input type='button'  value='Send Meetup Location'></a></td></tr>";
             }
-            
-
-            
           ?>
 
        

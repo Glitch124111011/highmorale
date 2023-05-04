@@ -13,6 +13,6 @@ $result1 = mysqli_query($db_connection, $sql1);
 $sql1="UPDATE tbcar SET status = 'Rejected' WHERE driver_id = '$id'";
 $result1 = mysqli_query($db_connection, $sql1);
 
-header("Location:admin.php");
+header("Location:landing_page_admin.php");
 
 ?>
