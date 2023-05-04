@@ -84,8 +84,7 @@ $row = mysqli_fetch_assoc($result);
         
            <?php echo "<h6>Welcome ".$row['firstname']." ".$row['lastname']."</h6>"; ?>
             <h2>BEST CARPOOL SITE EVER!</h2>
-            <p>LUGX Gaming is free Bootstrap 5 HTML CSS website template for your gaming websites. You can download and use this layout for commercial purposes. Please tell your friends about TemplateMo.</p>
-           
+            <p>Carpool is a transportation company that provides convenient and affordable carpooling services to commuters across the city. The company was founded in 2015 with the goal of reducing traffic congestion and carbon emissions in urban areas, while also helping people save time and money on their daily commute.</p>
           </div>
         </div>
         <div class="col-lg-4 offset-lg-2">
