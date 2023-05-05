@@ -24,7 +24,7 @@ $sql = "SELECT * FROM tbend_users WHERE user_email = '$email' AND password = '$p
 $result = mysqli_query($db_connection, $sql);  
 $row = mysqli_fetch_assoc($result);
 
-$id= $row['user_id'];
+$id1= $row['user_id'];
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -53,7 +53,7 @@ $mail = new PHPMailer(true);
         $mail->addAddress($email);     //Add a recipient
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = 'Verify your Email Address';
-        $mail->Body    = 'Hi, <b>'.$fn.' '.$ln.'</b><br><br> You are Applying as <b>Passenger</b><br><br>Thank you for signing up for our service. To complete the registration process, please click the following link to verify your email address:,<br><br><b><a href="https://carpool.highmorale.tech/update.php?id='.$id.'">Click Me</a></b><br><br>If you did not sign up for our service, please ignore this email.<br><br>
+        $mail->Body    = 'Hi, <b>'.$fn.' '.$ln.'</b><br><br> You are Applying as <b>Passenger</b><br><br>Thank you for signing up for our service. To complete the registration process, please click the following link to verify your email address:,<br><br><b><a href="https://carpool.highmorale.tech/update.php?id='.$id1.'">Click Me</a></b><br><br>If you did not sign up for our service, please ignore this email.<br><br>
         Best regards,<br>
         <b>Car Pooling Company<b>';
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
