@@ -36,7 +36,9 @@
                         <div class="col-md-6">
                             <div class="form-group">
                             <div class="form-group">
+                                
                                     <input type="text" name="license" class="form-control" placeholder="License Number *" value="" required/>
+                                    <p style="font-size:7pt;">You don't have a license yet please enter your license for registration</p>
                                 </div>
                                 <div class="form-group">
                                     <input type="text" name="car_type" class="form-control" placeholder="Car Type *" value="" required/>
