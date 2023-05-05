@@ -13,9 +13,8 @@
 </head>
 <body oncontextmenu='return false' class='snippet-body'>
     <?php
-        $id = $_GET['id'];
-        $_SESSION['id'] = $id;
-        $id2 = $_SESSION['id'];
+        session_start();
+        $id = $_SESSION['id'];
     ?>
 <div class="container register">
     <div class="row">
@@ -23,7 +22,7 @@
         <img style="height: 15%;width: 60%;"src="car.png" alt="" />
             <h3>Welcome</h3>
             <p>Sharing rides, saving the planet - one trip at a time.</p>
-            <?php echo "<a href='landing_page.php?id=$id2'><input type='button' value='Go Back' /></a>" ?><br />
+           <a href='landing_page.php'><input type='button' value='Go Back' /></a><br />
         </div>
         <div class="col-md-9 register-right">  
             <div class="tab-content" id="myTabContent">
@@ -44,7 +43,7 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" name="color" placeholder="Color *" value="" required/>
                             </div>
-                            <input type="hidden" class="" name="id" value="<?php echo $id2?>" />
+                            
                             <input type="submit" class="btnlogin" value="Submit" />
                         </div>
                         <div class="col-md-6">

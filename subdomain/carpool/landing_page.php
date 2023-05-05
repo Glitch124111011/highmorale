@@ -28,20 +28,18 @@
 
 include 'db_connect.php';
 session_start();
-$id = $_GET['id'];
-$_SESSION['id'] = $id;
-$id2 = $_SESSION['id'];
+if (isset($_SESSION['id'])) {
+$id = $_SESSION['id'];
 
-$sql = "SELECT * FROM tbend_users WHERE user_id = '$id2'";
+$sql = "SELECT * FROM tbend_users WHERE user_id = '$id'";
 $result = mysqli_query($db_connection, $sql);  
 $row = mysqli_fetch_assoc($result);
-?>
- <?php 
-                           if ($_SESSION['id']) {
-                           }else{
-                              header("location:login.html");
-                              exit();
-                           } ?>
+
+}else{
+  header("location:login.html");
+  exit();
+} ?>                   
+                           
   <header class="header-area header-sticky">
     <div class="container">
         <div class="row">
@@ -54,15 +52,15 @@ $row = mysqli_fetch_assoc($result);
                     <ul class="nav">
                       <li><a href="#" class="active">Home</a></li>
                       <li><a href="#">Contact Us</a></li>
-                      <li><?php echo "<a href='profile.php?id=$id2'>My Profile</a>" ?></li>
-                      <li><?php echo "<a href='car_list.php?id=$id2'>My Cars</a>" ?></li>
+                      <li><a href="profile.php">My Profile</a></li>
+                      <li><a href="car_list.php">My Cars</a></li>
                       <?php if($row['id_num'] == null){
-                        echo "<li style='background-color:rgba(0,0,0,0.4);border-radius: 25px; '> <a href='car_register_license.php?id=$id2'>Register a Car</a> </li>";
+                        echo "<li style='background-color:rgba(0,0,0,0.4);border-radius: 25px; '> <a href='car_register_license.php'>Register a Car</a> </li>";
                         }else{
-                          echo "<li style='background-color:rgba(0,0,0,0.4);border-radius: 25px; '> <a href='car_register.php?id=$id2'>Register a Car</a> </li>";
+                          echo "<li style='background-color:rgba(0,0,0,0.4);border-radius: 25px; '> <a href='car_register.php'>Register a Car</a> </li>";
                         }?>
                      
-                      <li><?php echo "<a href='logout.php?id=$id2'>"?>Log out</a></li>
+                      <li><a href='logout.php?id=$id'>Log out</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -83,7 +81,7 @@ $row = mysqli_fetch_assoc($result);
 
         
            <?php echo "<h6>Welcome ".$row['firstname']." ".$row['lastname']."</h6>"; ?>
-            <h2>BEST CARPOOL SITE EVER!</h2>
+            <h2>BEST CARPOOL SITE</h2>
             <p>Carpool is a transportation company that provides convenient and affordable carpooling services to commuters across the city. The company was founded in 2015 with the goal of reducing traffic congestion and carbon emissions in urban areas, while also helping people save time and money on their daily commute.</p>
           </div>
         </div>

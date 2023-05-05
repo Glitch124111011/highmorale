@@ -19,21 +19,14 @@
 <?php 
     include 'db_connect.php';
     session_start();
-    $id = $_GET['id'];
-    $_SESSION['id'] = $id;
-    $id2 = $_SESSION['id']; 
+    $id = $_SESSION['id']; 
 
 
-    $sql = "SELECT * FROM tbend_users WHERE user_id = '$id2'";
+    $sql = "SELECT * FROM tbend_users WHERE user_id = '$id'";
     $result = mysqli_query($db_connection, $sql);  
     $row = mysqli_fetch_assoc($result);
 ?>
-<?php 
-                           if ($_SESSION['id']) {
-                           }else{
-                              header("location:login.html");
-                              exit();
-                           } ?>
+
 <div class="container">
     <div class="main-body">
     
@@ -44,20 +37,20 @@
             <div class="col-12">
                 <nav class="main-nav">
                   
-                    <?php echo "<a href='landing_page.php?id=$id2' class='logo'>" ?>
+                    <?php echo "<a href='landing_page.php?id=$id' class='logo'>" ?>
                         <h1>CARPOOL</h1>
                     </a>      
                     <ul class="nav">
-                      <li><?php echo "<a href='landing_page.php?id=$id2' >Home</a>"?></li>
+                      <li><a href="landing_page.php">Home</a></li>
                       <li><a href="#">Contact Us</a></li>
-                      <li><?php echo "<a href='profile.php?id=$id2' class='active'>My Profile</a>" ?></li>
-                      <li><?php echo "<a href='car_list.php?id=$id2'>My Cars</a>" ?></li>
+                      <li><a href="profile.php" class='active'>My Profile</a></li>
+                      <li><a href="car_list.php">My Cars</a></li>
                       <?php if($row['id_num'] == null){
-                        echo "<li style='background-color:rgba(0,0,0,0.4);border-radius: 25px; '> <a href='car_register_license.php?id=$id2'>Register a Car</a> </li>";
+                        echo "<li style='background-color:rgba(0,0,0,0.4);border-radius: 25px; '> <a href='car_register_license.php'>Register a Car</a> </li>";
                         }else{
-                          echo "<li style='background-color:rgba(0,0,0,0.4);border-radius: 25px; '> <a href='car_register.php?id=$id2'>Register a Car</a> </li>";
+                          echo "<li style='background-color:rgba(0,0,0,0.4);border-radius: 25px; '> <a href='car_register.php'>Register a Car</a> </li>";
                         }?>
-                      <li><?php echo "<a href='logout.php?id=$id2'>"?>Log out</a></li>
+                      <li><a href='logout.php'>Log out</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -141,7 +134,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
-                      <?php echo "<a class='btn btn-info' target='__blank' href='profile_change.php?id=$id'>Edit</a>" ?> 
+                      <a class='btn btn-info' target='__blank' href='profile_change.php'>Edit</a>
                     </div>
                   </div>
                 </div>

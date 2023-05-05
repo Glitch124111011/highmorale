@@ -99,12 +99,10 @@
 <?php 
     include 'db_connect.php';
     session_start();
-    $id = $_GET['id'];
-    $_SESSION['id'] = $id;
-    $id2 = $_SESSION['id']; 
+    $id = $_SESSION['id']; 
 
 
-    $sql = "SELECT * FROM tbend_users WHERE user_id = '$id2'";
+    $sql = "SELECT * FROM tbend_users WHERE user_id = '$id'";
     $result = mysqli_query($db_connection, $sql);  
     $row = mysqli_fetch_assoc($result);
 ?>
@@ -119,14 +117,14 @@
             <div class="col-12">
                 <nav class="main-nav">
                   
-                    <?php echo "<a href='landing_page_admin.php?id=$id2' class='logo'>" ?>
+                   <a href='landing_page_admin.php' class='logo'>
                         <h1>CARPOOL</h1>
                     </a>      
                     <ul class="nav">
-                      <li><?php echo "<a href='landing_page_admin.php?id=$id2' >Home</a>"?></li>
+                      <li><a href='landing_page_admin.php' >Home</a></li>
                       <li><a href="#">Reports</a></li>
                       
-                      <li><?php echo "<a href='logout.php?id=$id2'>"?>Log out</a></li>
+                      <li><a href='logout.php?id=$id2'>Log out</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -201,19 +199,15 @@
             $row = mysqli_fetch_assoc($result);
         
             while($row = $result->fetch_assoc()) {
-              $id = $row["user_id"];
-              $sql2="SELECT * FROM tbcar WHERE driver_id = '$id'";
+              $id1 = $row["user_id"];
+              $sql2="SELECT * FROM tbcar WHERE driver_id = '$id1'";
             $result2 = mysqli_query($db_connection, $sql2);
             $row2 = mysqli_fetch_assoc($result2);
               
           echo "<tr><td>" . $row["user_id"]. "</td><td>" . $row["user_type"]. "</td><td>" . $row["firstname"] . "</td><td>"
-          . $row["lastname"]. "</td><td>".$row["user_email"]."</td><td>".$row["gender"]."</td><td>".$row2["car_type"]."</td><td>".$row2["model"]."</td><td>".$row2["color"]."</td><td>".$row2["plate_num"]."</td><td>".$row2["VIN"]."</td><td>".$row2["status"]."</td><td><a href='driver_approve.php?id=$id'><input type='button' value='Approve'></a><a href='driver_reject.php?id=$id'><input type='button' value='Reject'></a> <a href='location.php?id=$id'><input type='button'  value='Send Meetup Location'></a></td></tr>";
+          . $row["lastname"]. "</td><td>".$row["user_email"]."</td><td>".$row["gender"]."</td><td>".$row2["car_type"]."</td><td>".$row2["model"]."</td><td>".$row2["color"]."</td><td>".$row2["plate_num"]."</td><td>".$row2["VIN"]."</td><td>".$row2["status"]."</td><td><a href='driver_approve.php?id=$id1'><input type='button' value='Approve'></a><a href='driver_reject.php?id=$id1'><input type='button' value='Reject'></a> <a href='location.php?id=$id1'><input type='button'  value='Send Meetup Location'></a></td></tr>";
             }
-          ?>
-
-       
-       
-          
+          ?>         
   </tbody>
 </table>
     </div>

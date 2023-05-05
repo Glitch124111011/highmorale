@@ -7,7 +7,8 @@ $email = $_POST['email'];
 $phone = $_POST['phone_num'];
 $password = $_POST['password'];
 $gender = $_POST['gender'];
-$id_num = $_POST['id1'];
+
+$id=$_SESSION['id'];
 
 
 

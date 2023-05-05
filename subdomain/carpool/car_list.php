@@ -61,40 +61,33 @@
 <?php 
  include 'db_connect.php';
  session_start();
- $id = $_GET['id'];
- $_SESSION['id'] = $id;
- $id2 = $_SESSION['id'];
+ $id = $_SESSION['id'];
 
- $sql = "SELECT * FROM tbend_users WHERE user_id = '$id2'";
+ $sql = "SELECT * FROM tbend_users WHERE user_id = '$id'";
  $result = mysqli_query($db_connection, $sql);  
  $row = mysqli_fetch_assoc($result);
 ?>
-<?php 
-                           if ($_SESSION['id']) {
-                           }else{
-                              header("location:login.html");
-                              exit();
-                           } ?>
+
 <header class="header-area header-sticky">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
                   
-                <?php echo "<a href='landing_page.php?id=$id2' class='logo'>" ?>
+                <a href='landing_page.php' class='logo'>" ?>
                         <h1>CARPOOL</h1>
                     </a>      
                     <ul class="nav">
-                      <li><?php echo "<a href='landing_page.php?id=$id2' >Home</a>"?></li>
+                      <li><a href="landing_page.php">Home</a></li>
                       <li><a href="#">Contact Us</a></li>
-                      <li><?php echo "<a href='profile.php?id=$id2'>My Profile</a>" ?></li>
-                      <li><?php echo "<a href='car_list.php?id=$id2' class='active'>My Cars</a>" ?></li>
+                      <li><a href="profile.php">My Profile</a></li>
+                      <li><a href="car_list.php" class='active'>My Cars</a></li>
                       <?php if($row['id_num'] == null){
-                        echo "<li style='background-color:rgba(0,0,0,0.4);border-radius: 25px; '> <a href='car_register_license.php?id=$id2'>Register a Car</a> </li>";
+                        echo "<li style='background-color:rgba(0,0,0,0.4);border-radius: 25px; '> <a href='car_register_license.php'>Register a Car</a> </li>";
                         }else{
-                          echo "<li style='background-color:rgba(0,0,0,0.4);border-radius: 25px; '> <a href='car_register.php?id=$id2'>Register a Car</a> </li>";
+                          echo "<li style='background-color:rgba(0,0,0,0.4);border-radius: 25px; '> <a href='car_register.php'>Register a Car</a> </li>";
                         }?>
-                      <li><?php echo "<a href='logout.php?id=$id2'>"?>Log out</a></li>
+                      <li><a href='logout.php'>Log out</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -125,7 +118,7 @@
             <tbody>
             <?php
             include 'db_connect.php';
-            $sql2="SELECT * FROM tbcar WHERE driver_id = $id2";
+            $sql2="SELECT * FROM tbcar WHERE driver_id = $id";
             $result2 = mysqli_query($db_connection, $sql2);
             $row2 = mysqli_fetch_assoc($result);
             while($row2 = $result2->fetch_assoc()) {
