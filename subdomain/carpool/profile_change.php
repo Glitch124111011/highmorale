@@ -77,7 +77,7 @@
                   <div class="d-flex flex-column align-items-center text-center">
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
-                      <h4>John Doe</h4>
+                      <h4><?php echo $row['firstname'] ." ".$row['lastname'];?></h4>
                       <p class="text-secondary mb-1"><?php echo $row['user_type'];?></p>
                       <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p><br>
                       <h3 style="color:#0171f9;"><?php echo "PHP ".$row['balance'];?></h3><br>
@@ -97,10 +97,18 @@
 <div class="card-body">
 <div class="row mb-3">
 <div class="col-sm-3">
-<h6 class="mb-0">Full Name</h6>
+<h6 class="mb-0">First Name</h6>
 </div>
 <div class="col-sm-9 text-secondary">
-<input type="text" name="name" class="form-control" value="<?php echo $row['firstname']." ".$row['lastname'];?>">
+<input type="text" name="fname" class="form-control" value="<?php echo $row['firstname']; ?>">
+</div>
+</div>
+<div class="row mb-3">
+<div class="col-sm-3">
+<h6 class="mb-0">Last Name</h6>
+</div>
+<div class="col-sm-9 text-secondary">
+<input type="text" name="lname" class="form-control" value="<?php echo $row['lastname'];?>">
 </div>
 </div>
 <div class="row mb-3">
