@@ -74,8 +74,17 @@
                       <p class="text-secondary mb-1"><?php echo $row['user_type'];?></p>
                       <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
                       <br>
-                    <h3 style="color:#0171f9;"><?php echo "PHP ".$row['balance'];?></h3><br>
-                    <button class="btn btn-primary">Reload</button>
+                    <h3 style="color:#0171f9;"><?php echo $row['balance']." Tickets";?></h3><br>
+                    <?php
+                    if($row['user_type'] == "Passenger"){
+                      echo "<a href='cash_in.php' ><button class='btn btn-primary'>Cash In</button></a>";
+                    }else{
+                      echo "<a href='cash_in.php' ><button class='btn btn-primary'>Cash In</button></a> ";
+                      echo "<a href='cash_out.php' ><button class='btn btn-primary'>Cash Out</button></a>";
+                    }
+                    
+                    
+                    ?>
                     </div>
                   </div>
                 </div>

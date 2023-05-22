@@ -9,11 +9,12 @@ $color = $_POST['color'];
 $platenum = $_POST['plate'];
 $VIN = $_POST['vin'];
 
-$sql = "INSERT INTO tbcar (driver_id,plate_num,car_type,model,color,VIN,status) VALUES ('$id', '$platenum' ,'$car_type','$car_model','$color', '$VIN','Pending')";
+$sql = "INSERT INTO tbcar (user_id,plate_num,car_type,model,color,VIN,status) VALUES ('$id', '$platenum' ,'$car_type','$car_model','$color', '$VIN','Pending')";
 $result = mysqli_query($db_connection, $sql);  
 
-$sql1="UPDATE tbend_users SET user_type = 'Driver', id_num = '$license' WHERE user_id = '$id'";
-$result1 = mysqli_query($db_connection, $sql1);
+$sql2="UPDATE tbend_users SET id_num = '$license' WHERE user_id = '$id'";
+    $result2 = mysqli_query($db_connection, $sql2);
+
 header("Location:car_list.php?id=$id");
 exit();
 ?>

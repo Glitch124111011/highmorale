@@ -122,7 +122,7 @@
                     </a>      
                     <ul class="nav">
                       <li><a href='landing_page_admin.php' >Home</a></li>
-                      <li><a href="reports.php">Reports</a></li>
+                      <li><a href="#">Reports</a></li>
                       <li><a href="transac.php">Transactions</a></li>
                       <li><a href='logout.php?id=$id2'>Log out</a></li>
                   </ul>   
@@ -137,8 +137,8 @@
   
     <hr>
     <center>
-    <input type="button" onclick="layer1()" id="btn1" value="Passenger">
-    <input type="button" onclick="layer2()" id="btn1" value="Cars">
+    <input type="button" onclick="layer1()" id="btn1" value="All">
+ 
 <br>
 
     <div class="one" id="lyr1">
@@ -146,71 +146,38 @@
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">User Type</th>
-      <th scope="col">Firstname</th>
-      <th scope="col">Lastname</th>
-      <th scope="col">Email</th>
-      <th scope="col">Gender</th>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Pro Fee</th>
+      <th scope="col">Con Fee</th>
+      <th scope="col">Balance</th>
     </tr>
   </thead>
   <tbody >
     <?php
     include 'db_connect.php';
-            $sql="SELECT * FROM tbend_users WHERE verified = 'Y' AND user_type = 'Passenger'";
+            $sql1="SELECT * FROM tbreload WHERE transac_status = 'Approved'";
+            $result1 = mysqli_query($db_connection, $sql1);
+            $row1 = mysqli_fetch_assoc($result1);
+            
+            while($row1 = $result1->fetch_assoc()) {
+                $id1 = $row1['user_id'];
+                $sql="SELECT * FROM tbend_users WHERE $id1";
             $result = mysqli_query($db_connection, $sql);
             $row = mysqli_fetch_assoc($result);
-
+                $id2 = $row1['reloading_id'];
+          echo "<tr><td>" . $row1["reloading_id"]. "</td><td>" . $row["firstname"]." ".$row["lastname"]. "</td><td>" . $row1["type"] . "</td><td>"
+          . $row1["amount"]. "</td><td>".$row1["process_fee"]."</td><td>".$row1["conversion_fee"]."</td><td>".$row["balance"]."</td></tr>";
             
-            while($row = $result->fetch_assoc()) {
-          echo "<tr><td>" . $row["user_id"]. "</td><td>" . $row["user_type"]. "</td><td>" . $row["firstname"] . "</td><td>"
-          . $row["lastname"]. "</td><td>".$row["user_email"]."</td><td>".$row["gender"]."</td></tr>";
-            }
+        }
             
           ?>
   </tbody>
 </table>
     </div>
 
-    <div class="two" id="lyr2">
-    <table class="styled-table">
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">User Type</th>
-      <th scope="col">Firstname</th>
-      <th scope="col">Lastname</th>
-      <th scope="col">Email</th>
-      <th scope="col">Gender</th>
-      <th scope="col">Car Type</th>
-      <th scope="col">Car Model</th>
-      <th scope="col">Car Color</th>
-      <th scope="col">Plate Number</th>
-      <th scope="col">VIN Number</th>
-      <th scope="col">Status</th>
-      <th scope="col">Options</th>
-    </tr>
-  </thead>
-  <tbody  >
-    <?php
-    include 'db_connect.php';
-    $sql2 = "SELECT tbend_users.user_id, tbend_users.user_type, tbend_users.firstname,tbend_users.lastname,tbend_users.user_email,tbend_users.gender, tbcar.car_id, tbcar.car_type,tbcar.model,tbcar.color,tbcar.plate_num,tbcar.VIN,tbcar.status FROM tbend_users JOIN tbcar ON tbend_users.user_id = tbcar.user_id";
-        $result2 = mysqli_query($db_connection, $sql2);
-        $row2 = mysqli_fetch_assoc($result2);
-            while($row2 = $result2->fetch_assoc()) {
-              $id1 = $row2["user_id"];
-              $id2 = $row2["car_id"];
-              $sql3="SELECT * FROM tbend_users WHERE verified = 'Y' AND user_id = '$id1'";
-              $result3 = mysqli_query($db_connection, $sql3);
-              $row3 = mysqli_fetch_assoc($result3);
-             
-          echo "<tr><td>" . $row3["user_id"]. "</td><td>" . $row3["user_type"]. "</td><td>" . $row3["firstname"] . "</td><td>"
-          . $row3["lastname"]. "</td><td>".$row3["user_email"]."</td><td>".$row3["gender"]."</td><td>".$row2["car_type"]."</td><td>".$row2["model"]."</td><td>".$row2["color"]."</td><td>".$row2["plate_num"]."</td><td>".$row2["VIN"]."</td><td>".$row2["status"]."</td><td><a href='driver_approve.php?id=$id2'><input type='button' value='Approve'></a><a href='driver_reject.php?id=$id2'><input type='button' value='Reject'></a> <a href='location.php?id=$id1'><input type='button'  value='Send Meetup Location'></a></td></tr>";
-            
-        }
-          ?>         
-  </tbody>
-</table>
-    </div>
+    
     <center>
 </body>
 </html>

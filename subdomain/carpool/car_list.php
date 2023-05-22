@@ -74,7 +74,7 @@
             <div class="col-12">
                 <nav class="main-nav">
                   
-                <a href='landing_page.php' class='logo'>" ?>
+                <a href='landing_page.php' class='logo'>
                         <h1>CARPOOL</h1>
                     </a>      
                     <ul class="nav">
@@ -118,7 +118,7 @@
             <tbody>
             <?php
             include 'db_connect.php';
-            $sql2="SELECT * FROM tbcar WHERE driver_id = $id";
+            $sql2="SELECT * FROM tbcar WHERE user_id = $id";
             $result2 = mysqli_query($db_connection, $sql2);
             $row2 = mysqli_fetch_assoc($result);
             while($row2 = $result2->fetch_assoc()) {

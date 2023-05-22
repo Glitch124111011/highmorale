@@ -81,7 +81,7 @@
                       <p class="text-secondary mb-1"><?php echo $row['user_type'];?></p>
                       <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p><br>
                       <h3 style="color:#0171f9;"><?php echo "PHP ".$row['balance'];?></h3><br>
-                    <button class="btn btn-primary">Reload</button>
+                   
                     </div>
                   </div>
                 </div>
@@ -100,7 +100,7 @@
 <h6 class="mb-0">First Name</h6>
 </div>
 <div class="col-sm-9 text-secondary">
-<input type="text" name="fname" class="form-control" value="<?php echo $row['firstname']; ?>">
+<input type="text" name="fname" class="form-control" value="<?php echo $row['firstname']; ?> " >
 </div>
 </div>
 <div class="row mb-3">
@@ -108,7 +108,7 @@
 <h6 class="mb-0">Last Name</h6>
 </div>
 <div class="col-sm-9 text-secondary">
-<input type="text" name="lname" class="form-control" value="<?php echo $row['lastname'];?>">
+<input type="text" name="lname" class="form-control" value="<?php echo $row['lastname'];?>" >
 </div>
 </div>
 <div class="row mb-3">
@@ -138,10 +138,10 @@
 </div>
 <div class="row mb-3">
 <div class="col-sm-3">
-<h6 class="mb-0">Address</h6>
+<h6 class="mb-0">License Number</h6>
 </div>
 <div class="col-sm-9 text-secondary">
-<input type="text"  class="form-control" value="<?php echo $row['balance'];?>">
+<input type="text"  class="form-control" value="<?php echo $row['id_num'];?>" disabled>
 </div>
 </div>
 <div class="row">
