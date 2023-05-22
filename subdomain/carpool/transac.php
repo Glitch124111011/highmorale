@@ -294,7 +294,7 @@
     <?php
     include 'db_connect.php';
            
-    $sql="SELECT * FROM tbend_users";
+    $sql="SELECT * FROM tbend_users WHERE verified = 'Y'";
     $result = mysqli_query($db_connection, $sql);
     $row = mysqli_fetch_assoc($result);
            
@@ -331,7 +331,7 @@
         $row4 = mysqli_fetch_assoc($result4);
         $total_pro = $row4['total_pro'];
 
-        $sql5 = "SELECT SUM(balance) AS total_balance FROM tbend_users";
+        $sql5 = "SELECT SUM(balance) AS total_balance FROM tbend_users WHERE verified = 'Y'";
         $result5 = mysqli_query($db_connection, $sql5);
         $row5 = mysqli_fetch_assoc($result5);
         $total_balance = $row5['total_balance'];
