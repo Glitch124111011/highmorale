@@ -125,7 +125,7 @@ $id = $_SESSION['id'];
                   <?php
                    include 'db_connect.php';
 
-                  $sql2="SELECT * FROM product " ;
+                  $sql2="SELECT * FROM product" ;
                   $result2 = mysqli_query($db_connection, $sql2);
                   $row2 = mysqli_fetch_assoc($result2);
                    while($row2 = $result2->fetch_assoc()) {
