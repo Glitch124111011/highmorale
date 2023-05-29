@@ -138,7 +138,7 @@
 <?php
  include 'db_connect.php';
 
- $sql="SELECT * FROM product LIMIT 6  ";
+ $sql="SELECT * FROM product WHERE status = 'N' LIMIT 6  ";
  $result = mysqli_query($db_connection, $sql);
  $row = mysqli_fetch_assoc($result);
   while($row = $result->fetch_assoc()) {
