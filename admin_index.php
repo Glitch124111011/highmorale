@@ -125,7 +125,7 @@ $id = $_SESSION['id'];
                   <?php
                    include 'db_connect.php';
 
-                  $sql2="SELECT * FROM product WHERE status = 'N'" ;
+                  $sql2="SELECT * FROM product " ;
                   $result2 = mysqli_query($db_connection, $sql2);
                   $row2 = mysqli_fetch_assoc($result2);
                    while($row2 = $result2->fetch_assoc()) {
@@ -135,7 +135,7 @@ $id = $_SESSION['id'];
                       <label class='users-table__checkbox'>
                         <input type='checkbox' class='check'>
                         <div class='categories-table-img'>
-                          <picture><source srcset='./uploads/$row2[product_img]' type='image/webp'><img src='./uploads/$row2[product_img]' alt='category'></picture>
+                          <picture><source srcset='uploads/$row2[product_img]' type='image/webp'><img src='uploads/$row2[product_img]' alt='category'></picture>
                         </div>
                       </label>
                     </td>
