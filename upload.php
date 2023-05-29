@@ -120,7 +120,10 @@ $id = $_SESSION['id'];
         <label>Product Name:</label>
         <input type="text" name="name" id="name"><br><br>
         <label>Image:</label>
-        <input type="file" name="img" id="img"><br><br>
+        <input type="file" name="img" id="img">
+        <?php if (isset($_GET['error'])): ?>
+		      <p><?php echo $_GET['error']; ?></p>
+          <?php endif ?><br><br>
         <label>Price:</label>
         <input type="text" name="price" id="price"><br><br>
         <label>Details:</label>
