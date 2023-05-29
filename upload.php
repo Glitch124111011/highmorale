@@ -127,7 +127,7 @@ $id = $_SESSION['id'];
         <label>Price:</label>
         <input type="text" name="price" id="price"><br><br>
         <label>Details:</label>
-        <textarea type="text" name="detail" id="detail"></textarea><br><br>
+        <input type="text" name="detail" id="detail"><br><br>
         <label>Shoppee Link:</label>
         <input type="text" name="link" id="link"><br><br>
         <input type="Submit" name="submit" value="Submit">
