@@ -30,11 +30,12 @@ if (isset($_POST['submit']) && isset($_FILES['img'])) {
 
 			if (in_array($img_ex_lc, $allowed_exs)) {
 				$new_img_name = uniqid("IMG-", true).'.'.$img_ex_lc;
-				$img_upload_path = 'public_html/uploads/'.$new_img_name;
+				$img_upload_path = './uploads/'.$new_img_name;
 				move_uploaded_file($tmp_name, $img_upload_path);
 
 				// Insert into Database
-				$sql = "INSERT INTO product(product_img, category, product_name, details, shoppee_link, price, status) VALUES('$new_img_name', '$cat', '$nam', '$details' , '$link', '$price', 'N')";
+				$sql = "INSERT INTO product(product_img, category, product_name, details, shoppee_link, price, status) 
+				        VALUES('$new_img_name', '$cat', '$nam', '$details' , '$link', '$price', 'N')";
 				mysqli_query($db_connection, $sql);
 				header("Location: admin_index.php");
 			}else {
