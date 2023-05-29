@@ -19,7 +19,7 @@ if (isset($_POST['submit']) && isset($_FILES['img'])) {
 	$error = $_FILES['img']['error'];
 
 	if ($error === 0) {
-		if ($img_size > 125000) {
+		if ($img_size > 500000) {
 			$em = "Sorry, your file is too large.";
 		    header("Location: upload.php?error=$em");
 		}else {
