@@ -135,7 +135,7 @@ $id = $_SESSION['id'];
                       <label class='users-table__checkbox'>
                         <input type='checkbox' class='check'>
                         <div class='categories-table-img'>
-                          <picture><source srcset='uploads/$row2[product_img]' type='image/webp'><img src='uploads/$row2[product_img]' alt='category'></picture>
+                          <picture><source srcset='./uploads/$row2[product_img]' type='image/webp'><img src='./uploads/$row2[product_img]' alt='category'></picture>
                         </div>
                       </label>
                     </td>
