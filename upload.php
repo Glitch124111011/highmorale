@@ -113,24 +113,71 @@ $id = $_SESSION['id'];
     <br>
     <h4> <i>Recommended image Orientation is Square*</i></h4>
     <form method="post" action="upload_process.php" enctype="multipart/form-data">
+    <table>
+      <tr>
+      <td>
         <label >Category:</label>
-        <input type="text" name="cat" id="cat"><br><br>
+          </td>
+          <td style="width:200px;"></td>
+        <td>
+        <input type="text" name="cat" id="cat" required><br><br>
+        </td>
+        </tr>
        
-
+      
+          <tr>
+            <td>
         <label>Product Name:</label>
-        <input type="text" name="name" id="name"><br><br>
+          </td>
+          <td style="width:200px;"></td>
+            <td>
+        <input type="text" name="name" id="name" required><br><br>
+          </td>
+          </tr>
+          <tr>
+          <td>
         <label>Image:</label>
-        <input type="file" name="img" id="img">
+        </td>
+        <td style="width:200px;"></td>
+        <td>
+        <input type="file" name="img" id="img" required>
+        </td>
+        </tr>
         <?php if (isset($_GET['error'])): ?>
 		      <p><?php echo $_GET['error']; ?></p>
           <?php endif ?><br><br>
+          <tr>
+          <td>
         <label>Price:</label>
-        <input type="text" name="price" id="price"><br><br>
+        </td>
+        <td style="width:200px;"></td>
+      <td>
+        <input type="text" name="price" id="price" required><br><br>
+        </td>
+        <tr>
+        <td>
         <label>Details:</label>
-        <input type="text" name="detail" id="detail"><br><br>
+        </td>
+        <td style="width:200px;"></td>
+        <td>
+        <input style="width:400px;height:100px;"type="text" name="detail" id="detail" required><br><br>
+        </td>
+        </tr>
+        <tr>
+        <td>
         <label>Shoppee Link:</label>
-        <input type="text" name="link" id="link"><br><br>
+        </td>
+        <td style="width:200px;"></td>
+        <td>
+        <input style="width:400px;" type="text" name="link" id="link" required><br><br>
+        </td>
+        </tr>
+        <td style="width:200px;"></td>
+        <tr>
+        <td>
         <input type="Submit" name="submit" value="Submit">
+        </td>
+        </tr>
     </form>
 </div>
   
