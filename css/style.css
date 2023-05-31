@@ -170,9 +170,21 @@ a:focus {
       -ms-flex-align: center;
           align-items: center;
 
-          
 }
-@media (max-width: 500px) {
+@media (max-width: 700px) {
+  .slider_section {
+    background-image: url(../images/mobile2.jpg);
+  }
+  .slider_txt2{
+    padding-top:300px;
+  }.slider_txt{
+  
+  }.slider_txt3{
+    
+  }
+}
+
+/* @media (max-width: 900px) {
   .slider_section {
     background-image: url(../images/mobile.jpg);
   }
@@ -183,7 +195,8 @@ a:focus {
   }.slider_txt3{
     
   }
-}
+} */
+
 .slider_section .detail-box {
   color: #fefdfc;
 }
