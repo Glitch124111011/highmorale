@@ -120,7 +120,13 @@ $id = $_SESSION['id'];
           </td>
           <td style="width:200px;"></td>
         <td>
-        <input type="text" name="cat" id="cat" required><br><br>
+        <select id="cat" name="cat">
+          <option value="T-Shirt">T-Shirt</option>
+          <option value="Shorts">Shorts</option>
+          <option value="Hat">Hat</option>
+          <option value="Lanyard">Lanyard</option>
+          <option value="Sticker">Sticker</option>
+        </select><br><br>
         </td>
         </tr>
        

@@ -85,7 +85,176 @@
 <?php
  include 'db_connect.php';
 
- $sql="SELECT * FROM product WHERE status = 'N'";
+ $sql="SELECT * FROM product WHERE status = 'N' AND category = 'T-Shirt'";
+ $result = mysqli_query($db_connection, $sql);
+ $row = mysqli_fetch_assoc($result);
+  while($row = $result->fetch_assoc()) {
+     echo "<div class='col-lg-4'>
+     <div class='item'>
+         <div class='thumb'>
+             <div class='hover-content'>
+                 <ul>
+                     <li><a href='single_product/product-detail.php?id=$row[product_id]'><i class='fa fa-eye'></i></a></li>
+                 </ul>
+             </div>
+             <img style='width:350px;height:370px;' src='uploads/$row[product_img]' alt=''>
+         </div>
+         
+         <div class='down-content'>
+             <h4>$row[product_name]</h4>
+             <span>₱ $row[price]</span>
+         </div>
+         
+     </div>
+ </div>";
+  }
+     ?>
+     </section>
+<!-- -->
+     <section class="section" id="products">
+ <div class="container">
+     <div class="row">
+         <div class="col-lg-12">
+             <div class="section-heading">
+                 <h2>Shorts</h2>
+                 <span></span>
+             </div>
+         </div>
+     </div>
+ </div>
+ <div class="container">
+     <div class="row">
+<?php
+ include 'db_connect.php';
+
+ $sql="SELECT * FROM product WHERE status = 'N' AND category = 'Shorts'";
+ $result = mysqli_query($db_connection, $sql);
+ $row = mysqli_fetch_assoc($result);
+  while($row = $result->fetch_assoc()) {
+     echo "<div class='col-lg-4'>
+     <div class='item'>
+         <div class='thumb'>
+             <div class='hover-content'>
+                 <ul>
+                     <li><a href='single_product/product-detail.php?id=$row[product_id]'><i class='fa fa-eye'></i></a></li>
+                 </ul>
+             </div>
+             <img style='width:350px;height:370px;' src='uploads/$row[product_img]' alt=''>
+         </div>
+         
+         <div class='down-content'>
+             <h4>$row[product_name]</h4>
+             <span>₱ $row[price]</span>
+         </div>
+         
+     </div>
+ </div>";
+  }
+     ?>
+     </section>
+<!-- -->
+
+     <section class="section" id="products">
+ <div class="container">
+     <div class="row">
+         <div class="col-lg-12">
+             <div class="section-heading">
+                 <h2>Hats</h2>
+                 <span></span>
+             </div>
+         </div>
+     </div>
+ </div>
+ <div class="container">
+     <div class="row">
+<?php
+ include 'db_connect.php';
+
+ $sql="SELECT * FROM product WHERE status = 'N' AND category = 'Hat'";
+ $result = mysqli_query($db_connection, $sql);
+ $row = mysqli_fetch_assoc($result);
+  while($row = $result->fetch_assoc()) {
+     echo "<div class='col-lg-4'>
+     <div class='item'>
+         <div class='thumb'>
+             <div class='hover-content'>
+                 <ul>
+                     <li><a href='single_product/product-detail.php?id=$row[product_id]'><i class='fa fa-eye'></i></a></li>
+                 </ul>
+             </div>
+             <img style='width:350px;height:370px;' src='uploads/$row[product_img]' alt=''>
+         </div>
+         
+         <div class='down-content'>
+             <h4>$row[product_name]</h4>
+             <span>₱ $row[price]</span>
+         </div>
+         
+     </div>
+ </div>";
+  }
+     ?>
+     </section>
+<!-- -->
+     <section class="section" id="products">
+ <div class="container">
+     <div class="row">
+         <div class="col-lg-12">
+             <div class="section-heading">
+                 <h2>Lanyards</h2>
+                 <span></span>
+             </div>
+         </div>
+     </div>
+ </div>
+ <div class="container">
+     <div class="row">
+<?php
+ include 'db_connect.php';
+
+ $sql="SELECT * FROM product WHERE status = 'N' AND category = 'Lanyard'";
+ $result = mysqli_query($db_connection, $sql);
+ $row = mysqli_fetch_assoc($result);
+  while($row = $result->fetch_assoc()) {
+     echo "<div class='col-lg-4'>
+     <div class='item'>
+         <div class='thumb'>
+             <div class='hover-content'>
+                 <ul>
+                     <li><a href='single_product/product-detail.php?id=$row[product_id]'><i class='fa fa-eye'></i></a></li>
+                 </ul>
+             </div>
+             <img style='width:350px;height:370px;' src='uploads/$row[product_img]' alt=''>
+         </div>
+         
+         <div class='down-content'>
+             <h4>$row[product_name]</h4>
+             <span>₱ $row[price]</span>
+         </div>
+         
+     </div>
+ </div>";
+  }
+     ?>
+     </section>
+<!-- -->
+     <section class="section" id="products">
+ <div class="container">
+     <div class="row">
+         <div class="col-lg-12">
+             <div class="section-heading">
+                 <h2>Stickers</h2>
+                 <span></span>
+             </div>
+         </div>
+     </div>
+ </div>
+ <div class="container">
+     <div class="row">
+<?php
+ include 'db_connect.php';
+
+ $sql="SELECT * FROM product WHERE status = 'N' AND category = 'Sticker'";
  $result = mysqli_query($db_connection, $sql);
  $row = mysqli_fetch_assoc($result);
   while($row = $result->fetch_assoc()) {
