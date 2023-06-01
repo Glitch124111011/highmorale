@@ -136,7 +136,7 @@
  <div class="container">
      <div class="row">
 <?php
- include 'db_connect.php';
+ include 'db_connect2.php';
 
  $sql="SELECT * FROM product WHERE status = 'N' LIMIT 7  ";
  $result = mysqli_query($db_connection, $sql);

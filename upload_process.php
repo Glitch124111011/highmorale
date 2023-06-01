@@ -1,7 +1,7 @@
 <?php 
 
 if (isset($_POST['submit']) && isset($_FILES['img'])) {
-    include 'db_connect.php';
+    include 'db_connect2.php';
 
 	echo "<pre>";
 	print_r($_FILES['img']);

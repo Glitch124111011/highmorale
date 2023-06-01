@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'db_connect.php';
+include 'db_connect2.php';
 if(isset($_SESSION['id'])){
 $id = $_SESSION['id'];
 $on = "UPDATE user SET status = 'Offline' WHERE user_id='$id'";

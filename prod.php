@@ -83,7 +83,7 @@
  <div class="container">
      <div class="row">
 <?php
- include 'db_connect.php';
+ include 'db_connect2.php';
 
  $sql="SELECT * FROM product WHERE status = 'N' AND category = 'T-Shirt'";
  $result = mysqli_query($db_connection, $sql);
@@ -125,7 +125,7 @@
  <div class="container">
      <div class="row">
 <?php
- include 'db_connect.php';
+
 
  $sql="SELECT * FROM product WHERE status = 'N' AND category = 'Shorts'";
  $result = mysqli_query($db_connection, $sql);
@@ -168,7 +168,7 @@
  <div class="container">
      <div class="row">
 <?php
- include 'db_connect.php';
+
 
  $sql="SELECT * FROM product WHERE status = 'N' AND category = 'Hat'";
  $result = mysqli_query($db_connection, $sql);
@@ -210,7 +210,7 @@
  <div class="container">
      <div class="row">
 <?php
- include 'db_connect.php';
+
 
  $sql="SELECT * FROM product WHERE status = 'N' AND category = 'Lanyard'";
  $result = mysqli_query($db_connection, $sql);
@@ -252,7 +252,7 @@
  <div class="container">
      <div class="row">
 <?php
- include 'db_connect.php';
+
 
  $sql="SELECT * FROM product WHERE status = 'N' AND category = 'Sticker'";
  $result = mysqli_query($db_connection, $sql);

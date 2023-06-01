@@ -60,7 +60,7 @@
 
 <?php
 
-include 'db_connect.php';
+include 'db_connect2.php';
 session_start();
 if (isset($_SESSION['id'])) {
 $id = $_SESSION['id'];

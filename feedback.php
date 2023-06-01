@@ -17,7 +17,5 @@
         <input type="text" id="message" name="message" ><br><br>
         <input type="submit" value="Submit">
     </form>
-  
-
 </body>
 </html>
