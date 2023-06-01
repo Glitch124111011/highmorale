@@ -78,7 +78,7 @@
 	<body>
 	
 	<?php
-	include '../db_connect.php';
+	include '../db_connect2.php';
 	$id = $_GET['id'];
 	$sql= "SELECT * FROM product WHERE product_id = '$id'";
 	$result = mysqli_query($db_connection, $sql);
