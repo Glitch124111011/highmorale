@@ -59,7 +59,7 @@
         
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.php #message-section"> Contact</a>
+                  <a class="nav-link" href="index.php#message-section"> Contact</a>
                 </li>
                 
               </ul>
