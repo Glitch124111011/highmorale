@@ -136,8 +136,7 @@
  <input type="button" onclick="hat()" value="Hats">
  <input type="button" onclick="lanyard()" value="Lanyards">
  <input type="button" onclick="sticker()" value="Stickers">
-
-`</center>`
+</center>
 <div class="tshirt" id="shirt">
 <section class="section" id="products">
  <div class="container">
