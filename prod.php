@@ -29,7 +29,66 @@
 
     <link rel="stylesheet" href="assets/css/lightbox.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+<style>
+   
+    .tshirt{
+        display:block; 
+    } .short{
+        display:block; 
+    } .hat{
+        display:block; 
+    } .lanyard{
+        display:block; 
+    } .sticker{
+        display:block; 
+    }
+    </style>
+    <script>
+            function All(){
+                document.getElementById("shirt").style.display = 'block';
+                document.getElementById("Shorts").style.display = 'block';
+                document.getElementById("Hats").style.display = 'block';
+                document.getElementById("lanyard").style.display = 'block';
+                document.getElementById("sticker").style.display = 'block';
 
+            }function tshirt(){
+             
+                document.getElementById("shirt").style.display = 'block';
+                document.getElementById("Shorts").style.display = 'none';
+                document.getElementById("Hats").style.display = 'none';
+                document.getElementById("lanyard").style.display = 'none';
+                document.getElementById("sticker").style.display = 'none';
+            }
+            function short(){
+                
+                document.getElementById("shirt").style.display = 'none';
+                document.getElementById("Shorts").style.display = 'block';
+                document.getElementById("Hats").style.display = 'none';
+                document.getElementById("lanyard").style.display = 'none';
+                document.getElementById("sticker").style.display = 'none';
+            }function hat(){
+        
+                document.getElementById("shirt").style.display = 'none';
+                document.getElementById("Shorts").style.display = 'none';
+                document.getElementById("Hats").style.display = 'block';
+                document.getElementById("lanyard").style.display = 'none';
+                document.getElementById("sticker").style.display = 'none';
+            }function lanyard(){
+            
+                document.getElementById("shirt").style.display = 'none';
+                document.getElementById("Shorts").style.display = 'none';
+                document.getElementById("Hats").style.display = 'none';
+                document.getElementById("lanyard").style.display = 'block';
+                document.getElementById("sticker").style.display = 'none';
+            }function sticker(){
+              
+                document.getElementById("shirt").style.display = 'none';
+                document.getElementById("Shorts").style.display = 'none';
+                document.getElementById("Hats").style.display = 'none';
+                document.getElementById("lanyard").style.display = 'none';
+                document.getElementById("sticker").style.display = 'block';
+            }
+        </script>
 </head>
 <header class="header_section">
       <div class="container">
@@ -69,6 +128,17 @@
       </div>
     </header>
 <body>
+    <br><br>
+<center>
+ <input type="button" onclick="All()" value="All Products">
+ <input type="button" onclick="tshirt()" value="T-Shirts">
+ <input type="button" onclick="short()" value="Shorts">
+ <input type="button" onclick="hat()" value="Hats">
+ <input type="button" onclick="lanyard()" value="Lanyards">
+ <input type="button" onclick="sticker()" value="Stickers">
+
+`</center>`
+<div class="tshirt" id="shirt">
 <section class="section" id="products">
  <div class="container">
      <div class="row">
@@ -80,8 +150,11 @@
          </div>
      </div>
  </div>
+ 
+<br>
  <div class="container">
      <div class="row">
+       
 <?php
  include 'db_connect2.php';
 
@@ -109,8 +182,11 @@
  </div>";
   }
      ?>
-     </section>
+      </section>
+     </div>
+    
 <!-- -->
+<div class="short" id="Shorts">
      <section class="section" id="products">
  <div class="container">
      <div class="row">
@@ -124,6 +200,7 @@
  </div>
  <div class="container">
      <div class="row">
+    
 <?php
 
 
@@ -152,8 +229,10 @@
   }
      ?>
      </section>
+     </div>
+     
 <!-- -->
-
+<div class="hat" id="Hats">
      <section class="section" id="products">
  <div class="container">
      <div class="row">
@@ -167,6 +246,7 @@
  </div>
  <div class="container">
      <div class="row">
+    
 <?php
 
 
@@ -194,8 +274,11 @@
  </div>";
   }
      ?>
+     
      </section>
+    </div>
 <!-- -->
+<div class="lanyard" id="lanyard">
      <section class="section" id="products">
  <div class="container">
      <div class="row">
@@ -209,6 +292,7 @@
  </div>
  <div class="container">
      <div class="row">
+     
 <?php
 
 
@@ -236,8 +320,11 @@
  </div>";
   }
      ?>
+     
      </section>
+     </div>
 <!-- -->
+<div class="sticker" id="sticker">
      <section class="section" id="products">
  <div class="container">
      <div class="row">
@@ -251,6 +338,7 @@
  </div>
  <div class="container">
      <div class="row">
+    
 <?php
 
 
@@ -278,6 +366,8 @@
  </div>";
   }
      ?>
+   
      </section>
+     </div>
 </body>
 </html>

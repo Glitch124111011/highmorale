@@ -1,5 +1,5 @@
 <?php
-
+include 'db_connect2.php';
 session_start(); 
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
@@ -12,7 +12,14 @@ $_SESSION['email'] = $email;
 $_SESSION['name'] = $name;
 $_SESSION['subject'] = $subject;
 $_SESSION['message'] = $message;
+$email=$_SESSION['email'] ;
+$name=$_SESSION['name'] ;
+$subject=$_SESSION['subject'] ;
+$message=$_SESSION['message'] ;
 
+$sql = "INSERT INTO feedback(username,email,subject,message) 
+		VALUES('$name','$email','$subject','$message')";
+	mysqli_query($db_connection, $sql);
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;

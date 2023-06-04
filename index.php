@@ -95,7 +95,7 @@
                       <br />
                       <div class="slider_txt2">
                       <span class="slider_txt" style="border: 1px;border-color: black;">
-                        SPEAD<br>POSITIVITY
+                        SPREAD<br>POSITIVITY
                       </span>
                     </h1>
                     <p class="slider_txt3">
@@ -138,7 +138,7 @@
 <?php
  include 'db_connect2.php';
 
- $sql="SELECT * FROM product WHERE status = 'N' LIMIT 7  ";
+ $sql="SELECT * FROM product WHERE status = 'N' ORDER BY product_id DESC LIMIT 7   ";
  $result = mysqli_query($db_connection, $sql);
  $row = mysqli_fetch_assoc($result);
   while($row = $result->fetch_assoc()) {
@@ -180,7 +180,7 @@
                 A Few words about us
               </h2>
             </div>
-            <p>
+            <p style="font-size:20px;">
               High Morale has grown into a thriving clothing brand that is recognized for its high-quality, on-trend designs. At High Morale, we believe that fashion is not just about looking good, but also about feeling good. That's why we use only the finest materials and work with the best manufacturers to ensure that our clothing is comfortable, durable, and stylish.
             </p>
             <div>

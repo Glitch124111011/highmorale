@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>High Morale Dashboard</title>
+  <title>HIgh Morale Dashboard</title>
   <!-- Favicon -->
- 
-  <!-- Custom styles -->
-  <link rel="stylesheet" href="./css_admin/style.min.css">
 
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css_admin/style.min.css">
+  <link rel="stylesheet" href="css_admin/style.min.css">
 </head>
 
 <body>
@@ -22,9 +22,9 @@
   <aside class="sidebar">
     <div class="sidebar-start">
         <div class="sidebar-head">
-            <a href="/" class="logo-wrapper" title="Home">
+            <a href="admin_index.php" class="logo-wrapper" title="Home">
                 <span class="sr-only">Home</span>
-              
+                
                 <div class="logo-text">
                     <span class="logo-title">HIGH MORALE</span>
                     <span class="logo-subtitle">Dashboard</span>
@@ -38,7 +38,7 @@
         </div>
         <div class="sidebar-body">
             <ul class="sidebar-body-menu">
-            <li>
+              <li>
             <ul class="cat-sub-menu">
                         
                         </ul>
@@ -48,14 +48,13 @@
                   <a class="" href="admin_index.php"><span class="icon home" aria-hidden="true"></span>Products</a>
                 </li>
                 <li>
-                  <a class="active" href="upload.php"><span class="icon document" aria-hidden="true"></span>Add Product</a>
+                  <a class="" href="upload.php"><span class="icon document" aria-hidden="true"></span>Add Product</a>
                 </li>
                 <li>
-                  <a class="" href="feedback_admin.php"><span class="icon document" aria-hidden="true"></span>Feedback</a>
+                  <a class="active" href="feedback_admin.php"><span class="icon document" aria-hidden="true"></span>Feedback</a>
                 </li>
                 </ul>
 
-                
         </div>
     </div>
    
@@ -75,7 +74,7 @@ $id = $_SESSION['id'];
   <div class="main-wrapper">
   <nav class="main-nav--bg">
   <div class="container main-nav">
-    <h1>Admin</h1>
+  <h1>Admin</h1>
     <div class="main-nav-start">
      
     </div>
@@ -85,11 +84,11 @@ $id = $_SESSION['id'];
         <span class="icon menu-toggle--gray" aria-hidden="true"></span>
       </button>
      
-      <!-- <button class="theme-switcher gray-circle-btn" type="button" title="Switch theme">
+      <button class="theme-switcher gray-circle-btn" type="button" title="Switch theme">
         <span class="sr-only">Switch theme</span>
         <i class="sun-icon" data-feather="sun" aria-hidden="true"></i>
         <i class="moon-icon" data-feather="moon" aria-hidden="true"></i>
-      </button> -->
+      </button>
      
       <div class="nav-user-wrapper">
         <button href="##" class="nav-user-btn dropdown-btn" title="My profile" type="button">
@@ -109,90 +108,71 @@ $id = $_SESSION['id'];
     </div>
   </div>
 </nav>
-  <div class="main-wrapper">
-    <div style="padding-left:100px;">
-    <br>
-    <center><h1>Upload Product/s</h1></center>
-    <br>
-    <h4> <i>Recommended image Orientation is Square*</i></h4>
-    <form method="post" action="upload_process.php" enctype="multipart/form-data">
-    <table>
-      <tr>
-      <td>
-        <label >Category:</label>
-          </td>
-          <td style="width:200px;"></td>
-        <td>
-        <select id="cat" name="cat">
-          <option value="T-Shirt">T-Shirt</option>
-          <option value="Shorts">Shorts</option>
-          <option value="Hat">Hat</option>
-          <option value="Lanyard">Lanyard</option>
-          <option value="Sticker">Sticker</option>
-        </select><br><br>
-        </td>
-        </tr>
-       
-      
-          <tr>
-            <td>
-        <label>Product Name:</label>
-          </td>
-          <td style="width:200px;"></td>
-            <td>
-        <input type="text" name="name" id="name" required><br><br>
-          </td>
-          </tr>
-          <tr>
-          <td>
-        <label>Image:</label>
-        </td>
-        <td style="width:200px;"></td>
-        <td>
-        <input type="file" name="img" id="img" required>
-        </td>
-        </tr>
-        <?php if (isset($_GET['error'])): ?>
-		      <p><?php echo $_GET['error']; ?></p>
-          <?php endif ?><br><br>
-          <tr>
-          <td>
-        <label>Price:</label>
-        </td>
-        <td style="width:200px;"></td>
-      <td>
-        <input type="number" name="price" id="price" min="1" required><br><br>
-        </td>
-        <tr>
-        <td>
-        <label>Details:</label>
-        </td>
-        <td style="width:200px;"></td>
-        <td>
-        <input style="width:400px;height:100px;"type="text" name="detail" id="detail" required><br><br>
-        </td>
-        </tr>
-        <tr>
-        <td>
-        <label>Shoppee Link:</label>
-        </td>
-        <td style="width:200px;"></td>
-        <td>
-        <input style="width:400px;" type="text" name="link" id="link" required><br><br>
-        </td>
-        </tr>
-        <td style="width:200px;"></td>
-        <tr>
-        <td>
-        <input type="Submit" name="submit" value="Submit">
-        </td>
-        </tr>
-    </form>
-</div>
-  
-            
+            <div class="users-table table-wrapper">
+              <table class="posts-table">
+                <thead>
+                  <tr class="users-table-info">
+                    <th>
+                      <label class="users-table__checkbox ms-20">
+                        <input type="checkbox" class="check-all">Name
+                      </label>
+                    </th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Message</th>
+                    <th></th>
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                   
+
+                  $sql2="SELECT * FROM feedback " ;
+                  $result2 = mysqli_query($db_connection, $sql2);
+                  $row2 = mysqli_fetch_assoc($result2);
+                   while($row2 = $result2->fetch_assoc()) {
+                
+                    echo "<tr>
+                    <td>
+                      <label class='users-table__checkbox'>
+                        <input type='checkbox' class='check'>
+                        <div class='categories-table-img'>
+                          $row2[username]
+                        </div>
+                      </label>
+                    </td>
+                    <td>
+                    $row2[email]
+                    </td>
+                    <td>
+                      <div class='pages-table-img'>
+                        
+                      $row2[subject]
+                      </div>
+                    </td>
+                    <td><span class='badge-pending'> $row2[message]</span></td>
+                    
+                    <td>
+                      <span class='p-relative'>
+                        <button class='dropdown-btn transparent-btn' type='button' title='More info'>
+                          <div class='sr-only'>More info</div>
+                          <i data-feather='more-horizontal' aria-hidden='true'></i>
+                        </button>
+                        <ul class='users-item-dropdown dropdown'>
+                          
+                        </ul>
+                      </span>
+                    </td>
+                  </tr>";
+                   }
+                  ?>
+                  
+                </tbody>
+              </table>
+            </div>
           </div>
-          
+         
     <!-- ! Footer -->
     
   </div>

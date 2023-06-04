@@ -48,7 +48,10 @@
                   <a class="active" href="admin_index.php"><span class="icon home" aria-hidden="true"></span>Products</a>
                 </li>
                 <li>
-                  <a class="" href="upload.php"><span class="icon document" aria-hidden="true"></span>Upload</a>
+                  <a class="" href="upload.php"><span class="icon document" aria-hidden="true"></span>Add Product</a>
+                </li>
+                <li>
+                  <a class="" href="feedback_admin.php"><span class="icon document" aria-hidden="true"></span>Feedback</a>
                 </li>
                 </ul>
 
