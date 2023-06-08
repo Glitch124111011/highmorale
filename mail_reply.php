@@ -6,7 +6,10 @@ session_start();
 
 $email = $_SESSION['email'];
 $name = $_SESSION['name'];
-header("Location:send_reply.php");
+echo "<script>
+    alert('Your Message has been Sent to our Admin!');
+    location.href = 'index.php';
+    </script>";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -35,7 +38,7 @@ try {
     $mail->addAddress($email);     //Add a recipient
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Thank you';
-    $mail->Body    = 'Hi, <b>'.$name.'</b><br><br>Thank you for your recent inquiry at High Morale. We appreciate your interest and are delighted to hear from you. <br><br>Please feel free to ask us any questions you may have, and we will be more than happy to provide you with the information you need. We pride ourselves on delivering exceptional customer service, and we are committed to ensuring that you have a positive experience with us.<br><br>Thank you once again for considering our clothing shop, and we look forward to hearing from you soon.<br><br>Best regards,<br><br><b>HIGH MORALE</b>';
+    $mail->Body    = 'Hi, <b>'.$name.'</b><br><br>Thank you for your recent inquiry at High Morale. We appreciate your interest and are delighted to hear from you. <br><br>Please feel free to ask us any questions you may have, and we will be more than happy to provide you with the information you need. We pride ourselves on delivering exceptional customer service, and we are committed to ensuring that you have a positive experience with us.<br><br>Thank you once again for considering our clothing shop, and we look forward to hearing from you soon.<br><br>Best regards,<br><br><b>HIGH MORALE</b><br><br>Typically Reply within 1 to 3 business days.';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();

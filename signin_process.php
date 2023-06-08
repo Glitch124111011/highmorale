@@ -5,7 +5,7 @@ session_start();
 $email = $_POST["email"];
 $pass = $_POST["password"];
 
-$sql = "SELECT * FROM user WHERE email = '$email' AND password = '$pass' AND user_type = 'Admin'";
+$sql = "SELECT * FROM user WHERE email = '$email' AND password = '$pass' AND user_type = 'Admin' AND verified = 'Y'";
 $result = mysqli_query($db_connection, $sql);  
 $row = mysqli_fetch_assoc($result);
 $id = $row["user_id"];

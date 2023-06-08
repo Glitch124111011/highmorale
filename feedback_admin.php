@@ -84,11 +84,11 @@ $id = $_SESSION['id'];
         <span class="icon menu-toggle--gray" aria-hidden="true"></span>
       </button>
      
-      <button class="theme-switcher gray-circle-btn" type="button" title="Switch theme">
+      <!-- <button class="theme-switcher gray-circle-btn" type="button" title="Switch theme">
         <span class="sr-only">Switch theme</span>
         <i class="sun-icon" data-feather="sun" aria-hidden="true"></i>
         <i class="moon-icon" data-feather="moon" aria-hidden="true"></i>
-      </button>
+      </button> -->
      
       <div class="nav-user-wrapper">
         <button href="##" class="nav-user-btn dropdown-btn" title="My profile" type="button">
@@ -98,7 +98,10 @@ $id = $_SESSION['id'];
           </span>
         </button>
         <ul class="users-item-dropdown nav-user-dropdown dropdown">
-        
+        <li><a href="profile.php">
+               <!-- <i data-feather="user" aria-hidden="true"></i> -->
+               <a href="change_pass.php"><span>Change Password </span></a>
+            </a></li>
           <li><a class="danger" href="logout.php">
               <i data-feather="log-out" aria-hidden="true"></i>
               <span>Log out</span>
@@ -117,9 +120,9 @@ $id = $_SESSION['id'];
                         <input type="checkbox" class="check-all">Name
                       </label>
                     </th>
+                    <th>Message</th>
                     <th>Email</th>
                     <th>Subject</th>
-                    <th>Message</th>
                     <th></th>
                    
                   </tr>
@@ -137,21 +140,21 @@ $id = $_SESSION['id'];
                     <td>
                       <label class='users-table__checkbox'>
                         <input type='checkbox' class='check'>
-                        <div class='categories-table-img'>
+                        <div  class='categories-table-img'>
                           $row2[username]
                         </div>
                       </label>
                     </td>
                     <td>
-                    $row2[email]
+                    $row2[message]
                     </td>
                     <td>
                       <div class='pages-table-img'>
-                        
-                      $row2[subject]
+                      
+                      $row2[email]
                       </div>
                     </td>
-                    <td><span class='badge-pending'> $row2[message]</span></td>
+                    <td><span class='badge-pending'> $row2[subject]</span></td>
                     
                     <td>
                       <span class='p-relative'>

@@ -20,7 +20,7 @@ $message = $_SESSION['message'];
 
 <h1>THANK YOU WE HAVE RECIEVED YOUR FEEDBACK</h1>
 
-<a href="index.html"> <input type="button" value="Home"> <a>
+<a href="index.php"> <input type="button" value="Home"> <a>
 </center>
 </body>
 </html>

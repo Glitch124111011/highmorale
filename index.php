@@ -143,14 +143,14 @@
  $row = mysqli_fetch_assoc($result);
   while($row = $result->fetch_assoc()) {
      echo "<div class='col-lg-4'>
-     <div class='item'>
+     <div  class='item'>
          <div class='thumb'>
              <div class='hover-content'>
                  <ul>
                      <li><a href='single_product/product-detail.php?id=$row[product_id]'><i class='fa fa-eye'></i></a></li>
                  </ul>
              </div>
-             <img style='width:350px;height:370px;' src='uploads/$row[product_img]' alt=''>
+             <img style='width:350px;height:370px;border:solid black 0px;border-radius:25px;' src='uploads/$row[product_img]' alt=''>
          </div>
          <div class='down-content'>
              <h4>$row[product_name]</h4>
@@ -225,7 +225,14 @@
             <input type="email" id="email" name="email" placeholder="Email" />
           </div>
           <div>
-            <input type="text" id="subject" name="subject" placeholder="Subject" />
+            <select style="border-radius:25px;margin-bottom: 25px;width: 100%;padding-left: 25px;height: 50px;" id="subject" name="subject">
+            <option value="" disabled selected>Select Subject</option>
+          <option value="Inquiry">Inquiry</option>
+          <option value="Report">Report</option>
+          <option value="Feedback">Feedback</option>
+          <option value="Suggestions">Suggestions</option>
+          
+        </select>
           </div>
           <div>
             <input type="text" id="message" name="message" class="message-box" placeholder="Message" />
@@ -329,24 +336,19 @@ This brand was made for us to express our Positive Emotions
     // This example adds a marker to indicate the position of Bondi Beach in Sydney,
     // Australia.
     function initMap() {
-      var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 11,
-        center: {
-          lat: 40.645037,
-          lng: -73.880224
-        }
-      });
-
-      var image = "images/maps-and-flags.png";
-      var beachMarker = new google.maps.Marker({
-        position: {
-          lat: 40.645037,
-          lng: -73.880224
-        },
-        map: map,
-        icon: image
-      });
-    }
+      var coordinates = { lat: 15.125972201086691, lng: 120.95996416778316 };
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: coordinates,
+      zoom: 15
+    });
+  
+    // Add a marker to the map at the specified coordinates
+    var marker = new google.maps.Marker({
+      position: coordinates,
+      map: map,
+      title: 'Location'
+    });
+  }
   </script>
   <!-- google map js -->
 

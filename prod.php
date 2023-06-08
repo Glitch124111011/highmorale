@@ -41,10 +41,19 @@
         display:block; 
     } .sticker{
         display:block; 
+    }.btn{
+        color:white;
+        background-color:black;
+        border-radius:20px;
+    }.btn:hover{
+        color:black;
+        background-color:white;
+        border:solid black 1px;
     }
     </style>
     <script>
             function All(){
+                
                 document.getElementById("shirt").style.display = 'block';
                 document.getElementById("Shorts").style.display = 'block';
                 document.getElementById("Hats").style.display = 'block';
@@ -87,7 +96,11 @@
                 document.getElementById("Hats").style.display = 'none';
                 document.getElementById("lanyard").style.display = 'none';
                 document.getElementById("sticker").style.display = 'block';
+            }function filter1(){
+                
             }
+
+            
         </script>
 </head>
 <header class="header_section">
@@ -127,23 +140,30 @@
         </nav>
       </div>
     </header>
+    
 <body>
     <br><br>
 <center>
- <input type="button" onclick="All()" value="All Products">
- <input type="button" onclick="tshirt()" value="T-Shirts">
- <input type="button" onclick="short()" value="Shorts">
- <input type="button" onclick="hat()" value="Hats">
- <input type="button" onclick="lanyard()" value="Lanyards">
- <input type="button" onclick="sticker()" value="Stickers">
+ <input class="btn" id="btn1" type="button" onclick="All()" value="All Products">
+ <input class="btn" type="button" onclick="tshirt()" value="T-Shirts">
+ <input class="btn" type="button" onclick="short()" value="Shorts">
+ <input class="btn" type="button" onclick="hat()" value="Hats">
+ <input class="btn" type="button" onclick="lanyard()" value="Lanyards">
+ <input class="btn" type="button" onclick="sticker()" value="Stickers">
 </center>
+<!-- <br>
+<center>
+    <input class="btn" type="button" onclick="All()" value='lowest price - highest price'>
+    <input class="btn" type="button" onclick="All()" value='highest price - lowest price'>
+</center> -->
+
 <div class="tshirt" id="shirt">
 <section class="section" id="products">
  <div class="container">
      <div class="row">
          <div class="col-lg-12">
              <div class="section-heading">
-                 <h2>Our Latest Products</h2>
+                 <h2>T-Shirts</h2>
                  <span>Check out all of our products.</span>
              </div>
          </div>
@@ -169,7 +189,7 @@
                      <li><a href='single_product/product-detail.php?id=$row[product_id]'><i class='fa fa-eye'></i></a></li>
                  </ul>
              </div>
-             <img style='width:350px;height:370px;' src='uploads/$row[product_img]' alt=''>
+             <img style='width:350px;height:370px;border:solid black 0px;border-radius:25px;' src='uploads/$row[product_img]' alt=''>
          </div>
          
          <div class='down-content'>
@@ -215,7 +235,7 @@
                      <li><a href='single_product/product-detail.php?id=$row[product_id]'><i class='fa fa-eye'></i></a></li>
                  </ul>
              </div>
-             <img style='width:350px;height:370px;' src='uploads/$row[product_img]' alt=''>
+             <img style='width:350px;height:370px;border:solid black 0px;border-radius:25px;' src='uploads/$row[product_img]' alt=''>
          </div>
          
          <div class='down-content'>
@@ -261,7 +281,7 @@
                      <li><a href='single_product/product-detail.php?id=$row[product_id]'><i class='fa fa-eye'></i></a></li>
                  </ul>
              </div>
-             <img style='width:350px;height:370px;' src='uploads/$row[product_img]' alt=''>
+             <img style='width:350px;height:370px;border:solid black 0px;border-radius:25px;' src='uploads/$row[product_img]' alt=''>
          </div>
          
          <div class='down-content'>
@@ -307,7 +327,7 @@
                      <li><a href='single_product/product-detail.php?id=$row[product_id]'><i class='fa fa-eye'></i></a></li>
                  </ul>
              </div>
-             <img style='width:350px;height:370px;' src='uploads/$row[product_img]' alt=''>
+             <img style='width:350px;height:370px;border:solid black 0px;border-radius:25px;' src='uploads/$row[product_img]' alt=''>
          </div>
          
          <div class='down-content'>
@@ -353,7 +373,7 @@
                      <li><a href='single_product/product-detail.php?id=$row[product_id]'><i class='fa fa-eye'></i></a></li>
                  </ul>
              </div>
-             <img style='width:350px;height:370px;' src='uploads/$row[product_img]' alt=''>
+             <img style='width:350px;height:370px;border:solid black 0px;border-radius:25px;' src='uploads/$row[product_img]' alt=''>
          </div>
          
          <div class='down-content'>

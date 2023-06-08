@@ -99,7 +99,10 @@ $id = $_SESSION['id'];
           </span>
         </button>
         <ul class="users-item-dropdown nav-user-dropdown dropdown">
-        
+        <li><a href="profile.php">
+              <!-- <i data-feather="user" aria-hidden="true"></i> -->
+              <a href="change_pass.php"><span>Change Password </span></a>
+            </a></li>
           <li><a class="danger" href="logout.php">
               <i data-feather="log-out" aria-hidden="true"></i>
               <span>Log out</span>
@@ -115,20 +118,26 @@ $id = $_SESSION['id'];
     <center><h1>Upload Product/s</h1></center>
     <br>
     <h4> <i>Recommended image Orientation is Square*</i></h4>
+    <a href="category.php"><button style="float:right;margin-right:200px;background-color:blue;color:white;border-radius:25px;padding:10px 10px 10px 10px;">Add Category</button></a>
     <form method="post" action="upload_process.php" enctype="multipart/form-data">
     <table>
       <tr>
       <td>
-        <label >Category:</label>
+        <label >Category:*</label>
           </td>
           <td style="width:200px;"></td>
         <td>
         <select id="cat" name="cat">
-          <option value="T-Shirt">T-Shirt</option>
-          <option value="Shorts">Shorts</option>
-          <option value="Hat">Hat</option>
-          <option value="Lanyard">Lanyard</option>
-          <option value="Sticker">Sticker</option>
+        <option value="" disabled selected>Select category</option>
+        <?php
+        $sql = "SELECT * FROM category ";
+        $result = mysqli_query($db_connection, $sql);  
+        $row = mysqli_fetch_assoc($result);
+
+        while($row = $result->fetch_assoc()) {
+          echo "<option value='$row[cat_name]'>$row[cat_name]</option>";
+        }
+        ?>
         </select><br><br>
         </td>
         </tr>
@@ -136,7 +145,7 @@ $id = $_SESSION['id'];
       
           <tr>
             <td>
-        <label>Product Name:</label>
+        <label>Product Name:*</label>
           </td>
           <td style="width:200px;"></td>
             <td>
@@ -145,7 +154,7 @@ $id = $_SESSION['id'];
           </tr>
           <tr>
           <td>
-        <label>Image:</label>
+        <label>Image:*</label>
         </td>
         <td style="width:200px;"></td>
         <td>
@@ -157,7 +166,7 @@ $id = $_SESSION['id'];
           <?php endif ?><br><br>
           <tr>
           <td>
-        <label>Price:</label>
+        <label>Price:*</label>
         </td>
         <td style="width:200px;"></td>
       <td>
@@ -165,7 +174,7 @@ $id = $_SESSION['id'];
         </td>
         <tr>
         <td>
-        <label>Details:</label>
+        <label>Details:*</label>
         </td>
         <td style="width:200px;"></td>
         <td>
@@ -174,7 +183,7 @@ $id = $_SESSION['id'];
         </tr>
         <tr>
         <td>
-        <label>Shoppee Link:</label>
+        <label>Shoppee Link:*</label>
         </td>
         <td style="width:200px;"></td>
         <td>
