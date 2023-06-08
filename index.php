@@ -38,7 +38,17 @@
 
     <link rel="stylesheet" href="assets/css/lightbox.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
+<style>
+  .btn{
+  color:white;
+        background-color:black;
+        border-radius:20px;
+    }.btn:hover{
+        color:black;
+        background-color:white;
+        border:solid black 1px;
+    }
+  </style>
 </head>
 
 <body>
@@ -163,7 +173,7 @@
   }
      ?>
           </section>
-          <center><a href="prod.php"><button>SEE MORE</button></a></center>
+          <center><a href="prod.php"><button class="btn">SEE MORE</button></a></center>
           <br><br><br><br>
   <!-- about section -->
   <section class="about_section " id="about_section">
