@@ -101,12 +101,18 @@
 		   </div>
 		   <div class='col-sm-4'>
 			   <div class='product-desc'>
-				   <h3>$row[product_name]</h3>
+				   <h1>$row[product_name]</h1>
 				   <p class='price'>
 					   <span>₱ $row[price]</span> 
 					   
 				   </p>
 				   <p>$row[details].</p>
+				   <br>
+				   <span style='border:solid black 1px;padding:10px 20px 10px 20px;'>S</span>
+				   <span style='border:solid black 1px;padding:10px 20px 10px 20px;'>M</span>
+				   <span style='border:solid black 1px;padding:10px 20px 10px 20px;'>L</span>
+				   <br>
+				   <br> <br>
 			 <div class='row'>
 				 <div class='col-sm-12 text-center'>
 						   <p class='addtocart'><a href='$row[shoppee_link]' target='_blank' class='btn btn-primary btn-addtocart'><i class='icon-shopping-cart'></i> Add to Cart</a></p>
