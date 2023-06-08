@@ -7,7 +7,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Rokkitt:100,300,400,700" rel="stylesheet">
-	
+	<link rel = "icon" href = "../images/logo3.png" type = "image/x-icon">
 	<!-- Animate.css -->
 	 <link href="../css/style.css" rel="stylesheet" />
   <!-- responsive style -->
