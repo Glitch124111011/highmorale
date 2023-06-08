@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>High Morale Dashboard | Sign In</title>
   <!-- Favicon -->
-
+  <link rel = "icon" href = "images/logo3.png" type = "image/x-icon">
   <!-- Custom styles -->
   <link rel="stylesheet" href="css_admin/style.min.css">
 </head>

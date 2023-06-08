@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css2/style.css">
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-
+  <link rel = "icon" href = "images/logo3.png" type = "image/x-icon">
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 

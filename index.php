@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<link rel = "icon" href = "images/logo3.png" type = "image/x-icon">
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
